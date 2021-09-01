@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{singleProfile}}</h1>
+    <div *ngFor="let item of singleProfile | keyvalue">
+        <h1 *ngIf="item.key == 'contact'">{{item.key}}:{{item.value}}</h1>
+    </div>
 </body>
 </html>

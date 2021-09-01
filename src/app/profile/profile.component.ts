@@ -11,10 +11,14 @@ import { Profile } from '../model/Profile.model';
 export class ProfileComponent implements OnInit {
 
   singleProfile: any;
-  constructor(private blog:BlogserviceService,private route: ActivatedRoute, private router: Router) { }
+  constructor(private blog:BlogserviceService,private route: ActivatedRoute, private router: Router) {
+
+   }
 
   ngOnInit(): void {
+    this.viewProfile();
   }
+
 
   viewProfile(){
     this.blog.viewProfile(this.route.snapshot.params['id']).subscribe((result)=>{

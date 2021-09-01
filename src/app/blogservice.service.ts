@@ -29,8 +29,8 @@ export class BlogserviceService {
     return this.http.get(this.url2);
   }
   viewProfile(id:number){
-    console.log(this.http.get("http://localhost:3000/profile"+id));
-    return this.http.get<{}>("http://localhost:3000/profile"+id);
+    console.log(this.http.get("http://localhost:3000/profile/"+id));
+    return this.http.get("http://localhost:3000/profile/"+id);
   }
 
 

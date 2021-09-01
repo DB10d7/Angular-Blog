@@ -20,7 +20,6 @@ export class ProfileListComponent implements OnInit {
       })
   }
   viewProfile(id:number){
-    
     this.router.navigate(['profile',id]);
   }
 
