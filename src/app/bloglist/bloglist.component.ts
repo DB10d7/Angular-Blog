@@ -21,5 +21,21 @@ export class BloglistComponent implements OnInit {
       this.listblog = resp;
       })
   }
+  viewBlog(id:number){
+    this.router.navigate(['blog',id]);
+  }
+  deleteBlog(id:number){
 
+    this.blog.deleteBlog(id).subscribe((res)=>{
+      console.warn("data is here",res);
+      alert("Delete Blog");
+      this.ngOnInit();
+    })
+  }
+  updateBlog(id:number){
+    this.router.navigate(['blog/update',id]);
+  }
+  createBlog(){
+    this.router.navigate(['blog/add']);
+  }
 }

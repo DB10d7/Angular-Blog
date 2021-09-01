@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body>
-    <div *ngFor="let item of singleProfile | keyvalue">
-        <h1 *ngIf="item.key == 'contact'">{{item.key}}:{{item.value}}</h1>
+    <div class="container" *ngIf="singleProfile">
+        <div class="row my-5">
+            <h1 class="text-center" >{{singleProfile.id}}</h1>
+            <h1 class="text-center" >{{singleProfile.name}}</h1>
+            <h1 class="text-center" >{{singleProfile.profession}}</h1>
+            <h1 class="text-center" >{{singleProfile.contact}}</h1>
+        </div>
+        <th><button (click)="deleteProfile(singleProfile.id)" class="btn btn-danger">Delete</button></th>
     </div>
 </body>
 </html>

@@ -32,8 +32,19 @@ export class BlogserviceService {
     console.log(this.http.get("http://localhost:3000/profile/"+id));
     return this.http.get("http://localhost:3000/profile/"+id);
   }
-
-
+  viewBlog(id:number){
+    console.log(this.http.get("http://localhost:3000/blog/"+id));
+    return this.http.get("http://localhost:3000/blog/"+id);
+  }
+  deleteBlog(id:number){
+    return this.http.delete("http://localhost:3000/blog/"+id);
+  }
+  updateBlog(id: number, data: any){
+    return this.http.put<any>("http://localhost:3000/blog/"+id, data);
+  }
+  deleteProfile(id:number){
+    return this.http.delete("http://localhost:3000/profile/"+id);
+  }
 
 
 

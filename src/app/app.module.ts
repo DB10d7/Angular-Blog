@@ -24,7 +24,6 @@ import { ProfileListComponent } from './profile-list/profile-list.component';
     DisplayblogComponent,
     CreateProfileComponent,
     ProfileListComponent,
-    
   ],
   imports: [
     BrowserModule,

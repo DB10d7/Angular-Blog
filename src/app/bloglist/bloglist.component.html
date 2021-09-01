@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+  
     <div class="container">
         <div class="row">
           <table class="table text-center">
@@ -19,7 +20,10 @@
                 <th scope="col">title</th>
                 <th scope="col">body</th>
                 <th scope="col">author</th>
+                <th scope="col">profileId</th>
                 <th scope="col">View Blog</th>
+                <th scope="col">Update Blog</th>
+                <th scope="col">Delete Blog</th>
               </tr>
             </thead>
             <tbody>
@@ -28,10 +32,14 @@
                   <th>{{blog.title}}</th>
                   <th>{{blog.body}}</th>
                   <th>{{blog.author}}</th>
-                  <th><button class="btn btn-primary">View</button></th>
+                  <th>{{blog.profileId}}</th>
+                  <th><button (click)="viewBlog(blog.id)" class="btn btn-primary">View</button></th>
+                  <th><button (click)="updateBlog(blog.id)" class="btn btn-info">Update</button></th>
+                  <th><button (click)="deleteBlog(blog.id)" class="btn btn-danger">Delete</button></th>
               </tr>        
             </tbody>
           </table>
+          <th><button (click)="createBlog()" class="btn btn-success">Add Blog</button></th>
         </div>
     </div>
     
