@@ -19,5 +19,9 @@ export class ProfileListComponent implements OnInit {
       this.listProfile = resp;
       })
   }
+  viewProfile(id:number){
+    
+    this.router.navigate(['profile',id]);
+  }
 
 }

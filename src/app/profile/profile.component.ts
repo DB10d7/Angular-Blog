@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogserviceService } from '../blogservice.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Profile } from '../model/Profile.model';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  singleProfile: any;
+  constructor(private blog:BlogserviceService,private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  viewProfile(){
+    this.blog.viewProfile(this.route.snapshot.params['id']).subscribe((result)=>{
+      console.log("data is here",result);
+      this.singleProfile= result;
+      console.log(this.singleProfile);
+  })
+}
 }

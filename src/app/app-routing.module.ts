@@ -32,7 +32,7 @@ const routes: Routes = [
   },
   {
     component: UpdateblogComponent,
-    path: 'blog/update/:id'
+    path: 'profile/:id/blog/update/:id'
   },
   {
     component: DisplayblogComponent,

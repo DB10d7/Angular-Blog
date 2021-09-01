@@ -19,7 +19,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Profession</th>
                 <th scope="col">Contact</th>
-                
+                <th scope="col">View Profile</th>
               </tr>
             </thead>
             <tbody>
@@ -28,7 +28,8 @@
                   <th>{{item.name}}</th>
                   <th>{{item.profession}}</th>
                   <th>{{item.contact}}</th>
-              </tr>        
+                  <th><button (click)="viewProfile(item.id)" class="btn btn-primary">View</button></th>
+              </tr>      
             </tbody>
           </table>
         </div>
